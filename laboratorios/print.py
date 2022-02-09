@@ -1,0 +1,5 @@
+print("Hola Mundo")
+print("Hola, Esmeralda")
+print(22)
+print(True)
+print(0.2)
