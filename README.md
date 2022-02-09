@@ -1,2 +1,2 @@
 # Cisco-Python
- Código elaborado con ejemplos y ejercicios del Diplomado de Python tomado en CISCO
+ Código elaborado con ejemplos y ejercicios del diplomado de Python tomado en CISCO
