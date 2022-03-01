@@ -109,3 +109,95 @@ def strangeListFunction(n):
     return strangeList
 
 print(strangeListFunction(5))
+
+print("\nEjercicio #11")
+def imc(peso, altura):
+    return peso / altura ** 2
+print(imc(52.5, 1.65))
+
+print("\nEjercicio #11.1")
+def imc(peso, altura):
+    if altura < 1.0 or altura > 2.5 or \
+    peso < 20 or peso > 200:
+        return None
+    return peso / altura ** 2
+print(imc(352.5, 1.65))
+
+print("\nEjercicio #11.2") #Pulgadas
+def lbakg(lb):
+    return lb * 0.45359237
+print(lbakg(1))
+
+print("\nEjercicio #11.3") #pies y pulgadas
+def piepulgam(pie, pulgada):
+    return pie * 0.3048 + pulgada * 0.0254
+
+print("\n",piepulgam(1, 1))
+
+def piepulgam(pie, pulgada = 0.0):
+    return pie * 0.3048 + pulgada * 0.0254
+print(piepulgam(6))
+
+print("\nEjercicio #11.4")
+print("¿Cual es el IMC de una persona que tiene 5'7' de altura y un peso de 176 lbs?")
+def piespulgam(pies, pulgadas = 0.0):
+    return pies * 0.3048 + pulgadas * 0.0254
+
+
+def lbsakg(lb):
+    return lb * 0.45359237
+
+
+def imc(peso, altura):
+    if altura < 1.0 or altura > 2.5 or \
+    peso < 20 or peso > 200:
+        return None
+    
+    return peso / altura ** 2
+
+
+print(imc(peso = lbsakg(176), altura = piespulgam(5, 7)))
+
+print("\nEjercicio #12")
+print("Formando triangulos con tres parámetros")
+def esUnTriangulo(a, b, c):
+    if a + b <= c:
+        return False
+    if b + c <= a:
+        return False
+    if c + a <= b:
+        return False
+    return True
+
+print(esUnTriangulo (1, 1, 1))
+print(esUnTriangulo (1, 1, 3))
+
+print("\nEjercicio #13")
+print("Triangulo y teorema de pitagoras")
+def esUnTriangulo(a, b, c):
+    return a + b > c and b + c > a and c + a > b
+
+a = float(input("Ingresa la longitud del primer lado: "))
+b = float(input("Ingresa la longitud del segundo lado: "))
+c = float(input("Ingresa la longitud del tercer lado: "))
+
+if esUnTriangulo(a, b, c):
+    print("Felicidades, puede ser un triángulo.")
+else:
+    print("Lo siento, no puede ser un triángulo.")
+    
+print("\nEjercicio #14")
+print("Campo de una función")
+def esUnTriangulo(a, b, c):
+    return a + b > c and b + c > a and c + a > b
+
+def heron(a, b, c):
+    p = (a + b + c) / 2
+    return (p * (p - a) * (p - b) * (p - c)) ** 0.5
+
+def campoTriangulo(a, b, c):
+    if not esUnTriangulo(a, b, c):
+        return None
+    return heron(a, b, c)
+
+print(campoTriangulo(1., 1., 2. ** .5))
